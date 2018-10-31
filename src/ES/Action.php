@@ -9,7 +9,6 @@
     namespace Addcn\Model\ES;
 
 
-    use Addcn\Model\Exception\InvalidCallException;
 
     class Action extends Caller
     {
@@ -46,7 +45,7 @@
 
             $request = $this->_getDeleteRequest();
 
-            $json = $this->getCurl()->setMethod($request['method'])->post($request['url'], empty($request['params']) ? '' : json_encode($request['params']));
+            $json = $this->getCurl()->setMethod($request['method'])->send($request['url'], empty($request['params']) ? '' : json_encode($request['params']));
 
             return json_decode($json, true);
 
@@ -58,7 +57,7 @@
 
             $request = $this->_getUpdateRequest(true, $update_data, $type);
 
-            $json = $this->getCurl()->setMethod($request['method'])->post($request['url'], empty($request['params']) ? '' : json_encode($request['params']));
+            $json = $this->getCurl()->setMethod($request['method'])->send($request['url'], empty($request['params']) ? '' : json_encode($request['params']));
 
             return json_decode($json, true);
         }
@@ -70,7 +69,7 @@
 
             $request_params = $data;
 
-            $json = $this->getCurl()->setMethod($request['method'])->post($request['url'], empty($request_params) ? '' : json_encode($request_params));
+            $json = $this->getCurl()->setMethod($request['method'])->send($request['url'], empty($request_params) ? '' : json_encode($request_params));
 
             return json_decode($json, true);
 
@@ -162,7 +161,7 @@
 
             $url = $this->getHost() . '/' . $index;
 
-            $json = $this->getCurl()->setMethod($method)->post($url);
+            $json = $this->getCurl()->setMethod($method)->send($url);
 
             return json_decode($json, true);
         }
@@ -179,7 +178,7 @@
 
             $url = $this->getHost() . '/' . $index;
 
-            $json = $this->getCurl()->setMethod($method)->post($url, $json);
+            $json = $this->getCurl()->setMethod($method)->send($url, $json);
 
             return json_decode($json, true);
         }

@@ -73,13 +73,13 @@ class CurlNormal
     }
 
     /**
-     * 雲信請求方法
+     * send request
      * @param string $url
      * @param array $param
      * @throws \Exception
      * @return mixed
      */
-    public function post($url, $param = array())
+    public function send($url, $param = array())
     {
 
         $header = $this->getHeader();

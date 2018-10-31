@@ -28,7 +28,7 @@
 
             $request = $this->_getRequest();
 
-            $json = $this->getCurl()->setMethod($request['method'])->post($request['url'], json_encode($request['params']));
+            $json = $this->getCurl()->setMethod($request['method'])->send($request['url'], json_encode($request['params']));
 
             if ($data_type == 'array') {
 
@@ -102,7 +102,7 @@
 
             $url = $this->getUrl($id);
 
-            return $this->getCurl()->setMethod('get')->post($url);
+            return $this->getCurl()->setMethod('get')->send($url);
 
         }
 

@@ -10,7 +10,6 @@
 
 
     use Addcn\Model\ES\Caller;
-    use Addcn\Model\Exception\InvalidCallException;
 
     class Base extends \Addcn\Model\ES\Queries\Base
     {

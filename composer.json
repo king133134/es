@@ -1,0 +1,21 @@
+{
+  "name": "king133134/es",
+  "description": "es search,es action",
+  "type": "library",
+  "license": "apache 2",
+  "authors": [
+    {
+      "name": "kong",
+      "email": "598929483@163.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "phpunit/phpunit": "^7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PhpZendo\\": "src/"
+    }
+  }
+}

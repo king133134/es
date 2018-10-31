@@ -6,12 +6,12 @@
      * Time: 17:59
      */
 
-    namespace Addcn\Model\ES\Queries\Words;
+    namespace ElasticSearch\ES\Queries\Words;
 
 
-    use Addcn\Model\ES\Caller;
+    use ElasticSearch\ES\Caller;
 
-    class Base extends \Addcn\Model\ES\Queries\Base
+    class Base extends \ElasticSearch\ES\Queries\Base
     {
 
         protected $conditionCollection;
@@ -63,7 +63,7 @@
         protected function _getConditionArray($condition)
         {
 
-            if (is_object($condition) && $condition instanceof \Addcn\Model\ES\Queries\Base) {
+            if (is_object($condition) && $condition instanceof \ElasticSearch\ES\Queries\Base) {
                 return $condition->getConditions();
             } else {
                 return $condition;

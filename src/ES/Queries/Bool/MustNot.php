@@ -6,10 +6,10 @@
      * Time: 18:17
      */
 
-    namespace Addcn\Model\ES\Queries\Bool;
+    namespace ElasticSearch\ES\Queries\Bool;
 
 
-    use Addcn\Model\ES\Queries\Words;
+    use ElasticSearch\ES\Queries\Words;
 
     class MustNot extends Words\Bool
     {

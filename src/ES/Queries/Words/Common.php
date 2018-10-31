@@ -6,10 +6,10 @@
      * Time: 18:11
      */
 
-    namespace Addcn\Model\ES\Queries\Words;
+    namespace ElasticSearch\ES\Queries\Words;
 
 
-    use Addcn\Model\ES\Caller;
+    use ElasticSearch\ES\Caller;
 
     class Common extends Base
     {

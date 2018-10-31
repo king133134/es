@@ -6,11 +6,11 @@
      * Time: 17:59
      */
 
-    namespace Addcn\Model\ES\Queries;
+    namespace ElasticSearch\ES\Queries;
 
 
-    use Addcn\Model\ES\Caller;
-    use Addcn\Model\Exception\InvalidCallException;
+    use ElasticSearch\ES\Caller;
+    use ElasticSearch\Exception\InvalidCallException;
 
     abstract class Base
     {

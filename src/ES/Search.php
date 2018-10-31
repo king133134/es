@@ -6,7 +6,7 @@
      * Time: 15:38
      */
 
-    namespace Addcn\Model\ES;
+    namespace ElasticSearch\ES;
 
     class Search extends Caller
     {

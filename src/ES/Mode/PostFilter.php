@@ -6,7 +6,7 @@
      * Time: 17:16
      */
 
-    namespace Addcn\Model\ES\Mode;
+    namespace ElasticSearch\ES\Mode;
 
 
     class PostFilter extends Base

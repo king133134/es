@@ -6,7 +6,7 @@
      * Time: 14:07
      */
 
-    namespace Addcn\Model\ES;
+    namespace ElasticSearch\ES;
 
 
 

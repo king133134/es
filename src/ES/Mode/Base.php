@@ -6,11 +6,11 @@
      * Time: 16:56
      */
 
-    namespace Addcn\Model\ES\Mode;
+    namespace ElasticSearch\ES\Mode;
 
 
-    use Addcn\Model\ES\Caller;
-    use Addcn\Model\ES\Queries\Words\Bool;
+    use ElasticSearch\ES\Caller;
+    use ElasticSearch\ES\Queries\Words\Bool;
 
     class Base extends Bool
     {

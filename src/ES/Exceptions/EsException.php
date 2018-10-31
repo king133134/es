@@ -6,7 +6,7 @@
      * Time: 11:53
      */
 
-    namespace Addcn\Model\ES\Exceptions;
+    namespace ElasticSearch\ES\Exceptions;
 
 
     class EsException extends \Exception

@@ -6,7 +6,7 @@
      * Time: 17:00
      */
 
-    namespace Addcn\Model\ES\Mode;
+    namespace ElasticSearch\ES\Mode;
 
 
     class Query extends Base

@@ -6,8 +6,8 @@
      * Time: 17:36
      */
 
-    namespace Addcn\Model\ES\Queries\Bool;
-    use Addcn\Model\ES\Queries\Words;
+    namespace ElasticSearch\ES\Queries\Bool;
+    use ElasticSearch\ES\Queries\Words;
 
 
     class Filter extends Words\Bool

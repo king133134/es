@@ -1,4 +1,4 @@
-<?php namespace Addcn\Model\Request;
+<?php namespace ElasticSearch\Request;
 
 /**
  *

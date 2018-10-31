@@ -6,14 +6,14 @@
      * Time: 18:01
      */
 
-    namespace Addcn\Model\ES\Queries;
+    namespace ElasticSearch\ES\Queries;
 
 
-    use Addcn\Model\ES\Caller;
-    use Addcn\Model\ES\Queries\Bool\Must;
-    use Addcn\Model\ES\Queries\Bool\MustNot;
-    use Addcn\Model\ES\Queries\Bool\Should;
-    use Addcn\Model\ES\Queries\Bool\Filter;
+    use ElasticSearch\ES\Caller;
+    use ElasticSearch\ES\Queries\Bool\Must;
+    use ElasticSearch\ES\Queries\Bool\MustNot;
+    use ElasticSearch\ES\Queries\Bool\Should;
+    use ElasticSearch\ES\Queries\Bool\Filter;
 
     class Bool extends Base
     {

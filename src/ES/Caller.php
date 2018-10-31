@@ -6,12 +6,12 @@
      * Time: 19:28
      */
 
-    namespace Addcn\Model\ES;
+    namespace ElasticSearch\ES;
 
 
-    use Addcn\Model\ES\Mode\Base;
-    use Addcn\Model\Exception\InvalidCallException;
-    use Addcn\Model\Request\CurlNormal;
+    use ElasticSearch\ES\Mode\Base;
+    use ElasticSearch\ES\Exceptions\InvalidCallException;
+    use ElasticSearch\Request\CurlNormal;
 
     class Caller
     {
@@ -121,7 +121,7 @@
             }
 
 
-            $modes = array('query' => 'Addcn\Model\ES\Mode\Query', 'post_filter' => 'Addcn\Model\ES\Mode\PostFilter');
+            $modes = array('query' => 'ElasticSearch\ES\Mode\Query', 'post_filter' => 'ElasticSearch\ES\Mode\PostFilter');
 
             if (!isset($modes[$mode])) {
                 throw new InvalidCallException('mode is invalid!');

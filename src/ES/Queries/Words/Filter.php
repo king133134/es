@@ -6,7 +6,7 @@
      * Time: 17:32
      */
 
-    namespace Addcn\Model\ES\Queries\Words;
+    namespace ElasticSearch\ES\Queries\Words;
 
 
     class Filter extends Common

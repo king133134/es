@@ -2,7 +2,7 @@
   "name": "king133134/es",
   "description": "es search,es action",
   "type": "library",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "authors": [
     {
       "name": "kong",

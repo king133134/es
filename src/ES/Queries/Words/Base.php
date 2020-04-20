@@ -70,15 +70,24 @@
             }
         }
 
-        protected function _setCondition($condition)
+        protected function _setCondition($condition, $constantScore = null)
         {
 
             if (empty($condition)) {
                 return $this;
             }
 
+            if (is_numeric($constantScore)) {
+                $condition = [
+                    'constant_score' => [
+                        'filter' => $condition,
+                        'boost'  => $constantScore
+                    ]
+                ];
+            }
+
             if ($this->conditionMultiple) {
-                if (!is_array($this->conditionCollection)){
+                if (!is_array($this->conditionCollection)) {
                     $this->conditionCollection = array();
                 }
                 $this->conditionCollection[] = $condition;

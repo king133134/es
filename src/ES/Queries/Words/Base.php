@@ -1,9 +1,6 @@
 <?php
     /**
-     * Created by PhpStorm.
-     * User: admin
-     * Date: 2018/3/28
-     * Time: 17:59
+     * 查询对象基类
      */
 
     namespace ElasticSearch\ES\Queries\Words;
@@ -70,15 +67,24 @@
             }
         }
 
-        protected function _setCondition($condition)
+        protected function _setCondition($condition, $constantScore = null)
         {
 
             if (empty($condition)) {
                 return $this;
             }
 
+            if (is_numeric($constantScore)) {
+                $condition = [
+                    'constant_score' => [
+                        'filter' => $condition,
+                        'boost'  => $constantScore
+                    ]
+                ];
+            }
+
             if ($this->conditionMultiple) {
-                if (!is_array($this->conditionCollection)){
+                if (!is_array($this->conditionCollection)) {
                     $this->conditionCollection = array();
                 }
                 $this->conditionCollection[] = $condition;

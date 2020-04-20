@@ -1,9 +1,6 @@
 <?php
     /**
-     * Created by PhpStorm.
-     * User: admin
-     * Date: 2018/3/28
-     * Time: 17:59
+     * 查询对象基类
      */
 
     namespace ElasticSearch\ES\Queries\Words;

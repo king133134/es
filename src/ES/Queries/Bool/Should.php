@@ -11,7 +11,7 @@
 
     use ElasticSearch\ES\Queries\Words;
 
-    class Should extends Words\Bool
+    class Should extends Words\Boolean
     {
 
         protected $keyWord = 'should';

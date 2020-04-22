@@ -10,7 +10,7 @@
     use ElasticSearch\ES\Queries\Words;
 
 
-    class Filter extends Words\Bool
+    class Filter extends Words\Boolean
     {
 
         protected $keyWord = 'filter';

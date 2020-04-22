@@ -15,7 +15,7 @@
     use ElasticSearch\ES\Queries\Bool\Should;
     use ElasticSearch\ES\Queries\Bool\Filter;
 
-    class Bool extends Base
+    class Boolean extends Base
     {
 
         protected $keyWord = 'bool';

@@ -10,9 +10,9 @@
 
 
     use ElasticSearch\ES\Caller;
-    use ElasticSearch\ES\Queries\Words\Bool;
+    use ElasticSearch\ES\Queries\Words\Boolean;
 
-    class Base extends Bool
+    class Base extends Boolean
     {
 
         protected $conditionMultiple = false;

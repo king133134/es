@@ -110,7 +110,7 @@
 
         /**
          * @param $mode
-         * @return Mode\Base
+         * @return Base
          * @throws InvalidCallException
          */
         public function mode($mode)
@@ -135,6 +135,12 @@
 
             return $this->mode;
 
+        }
+
+
+        public function query()
+        {
+            return $this->mode('query');
         }
 
 

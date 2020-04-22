@@ -9,7 +9,7 @@
     namespace ElasticSearch\ES\Queries\Words;
 
 
-    class Bool extends Common
+    class Boolean extends Common
     {
 
         /**
@@ -21,7 +21,7 @@
 
         /**
          * @param int $id
-         * @return \ElasticSearch\ES\Queries\Bool|mixed|object
+         * @return \ElasticSearch\ES\Queries\Boolean|mixed|object
          */
         public function bool($id = 0)
         {
@@ -35,14 +35,14 @@
                     return $this->bool[$id];
                 }
 
-                $this->bool[$id] = new \ElasticSearch\ES\Queries\Bool($this->caller);
+                $this->bool[$id] = new \ElasticSearch\ES\Queries\Boolean($this->caller);
                 $this->_setCondition($this->bool[$id]);
 
                 return $this->bool[$id];
 
             } else {
                 if (!$this->bool) {
-                    $this->bool = new \ElasticSearch\ES\Queries\Bool($this->caller);
+                    $this->bool = new \ElasticSearch\ES\Queries\Boolean($this->caller);
                     $this->_setCondition($this->bool);
                 }
 

@@ -11,7 +11,7 @@
 
     use ElasticSearch\ES\Queries\Words;
 
-    class MustNot extends Words\Bool
+    class MustNot extends Words\Boolean
     {
 
         protected $keyWord = 'must_not';

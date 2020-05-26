@@ -233,5 +233,28 @@
             return $this->_setCondition($condition, $constantScore);
         }
 
+        /**
+         * @param $field
+         * @param $lat
+         * @param $lon
+         * @param $distance
+         * @param null $constantScore
+         * @return Common
+         */
+        public function geoDistance($field, $lat, $lon, $distance, $constantScore = null)
+        {
+            $condition = array(
+                'geo_distance' => array(
+                    'distance' => $distance,
+                    $field => array(
+                        'lat' => $lat,
+                        'lon' => $lon
+                    )
+                )
+            );
+
+            return $this->_setCondition($condition, $constantScore);
+        }
+
 
     }

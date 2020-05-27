@@ -13,12 +13,19 @@
 
         protected $fields = array();
 
+        protected $scriptFields = array();
+
         public function fields(array $fields = array())
         {
 
             $this->fields = $fields;
 
             return $this;
+
+        }
+
+        public function scriptFields()
+        {
 
         }
 
@@ -91,6 +98,10 @@
 
             if (!empty($this->fields)) {
                 $params['_source'] = $this->fields;
+            }
+
+            if (!empty($this->scriptFields)) {
+                $params['script_fields'] = $this->scriptFields;
             }
 
             return $params;

@@ -24,9 +24,11 @@
 
         }
 
-        public function scriptFields()
+        public function scriptFields(array $fields = array())
         {
+            $this->scriptFields = $fields;
 
+            return $this;
         }
 
 

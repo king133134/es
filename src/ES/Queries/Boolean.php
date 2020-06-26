@@ -46,7 +46,7 @@
         {
 
             if ($this->mustNot) {
-                return $this->must;
+                return $this->mustNot;
             }
             $this->mustNot = new MustNot($this->caller);
 

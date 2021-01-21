@@ -15,6 +15,8 @@
 
         protected $scriptFields = array();
 
+        protected $searchAfter = array();
+
         public function fields(array $fields = array())
         {
 
@@ -29,6 +31,18 @@
             $this->scriptFields = $fields;
 
             return $this;
+        }
+
+        public function searchAfter(array $searchAfter)
+        {
+            $this->searchAfter = $searchAfter;
+
+            return $this;
+        }
+
+        protected function _getSearchAfter()
+        {
+            return $this->searchAfter ? array('search_after' => $this->searchAfter) : array();
         }
 
 
@@ -68,8 +82,14 @@
 
         protected function _getRequest($clean = true)
         {
-            $url = $this->getUrl('_search');
-            $method = 'POST';
+            if ($this->multiSearchNDJson) {
+                $url = $this->getUrl('_msearch');
+                $method = 'POST';
+            } else {
+                $url = $this->getUrl('_search');
+                $method = 'POST';
+            }
+
             $params = $this->_getParams(false);
 
             return compact('url', 'method', 'params');
@@ -95,7 +115,7 @@
 
                 $conditions = $this->mode ? $this->mode->getConditions() : array();
 
-                $params = $conditions + array('size' => $this->size, 'from' => $this->from, 'sort' => $this->getOrders()) + $this->_getAggs();
+                $params = $conditions + array('size' => $this->size, 'from' => $this->from, 'sort' => $this->getOrders()) + $this->_getSearchAfter() + $this->_getAggs() + $this->_getCollapse();
             }
 
             if (!empty($this->fields)) {
@@ -234,6 +254,33 @@
 
             $this->aggs = array();
 
+        }
+
+        protected $collapse = array();
+
+        protected function _getCollapse()
+        {
+            if (empty($this->collapse)) {
+                return array();
+            }
+
+            return ['collapse' => $this->collapse];
+        }
+
+        public function collapse(array $collapse = array())
+        {
+            $this->collapse = $collapse;
+
+            return $this;
+        }
+
+        protected $multiSearchNDJson = null;
+
+        public function multiSearch($ndJson)
+        {
+            $this->multiSearchNDJson = $ndJson;
+
+            return $this;
         }
 
 
